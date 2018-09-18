@@ -1,0 +1,14 @@
+{
+  "name": "pogo",
+  "version": "1.0.0",
+  "description": "A discord bot for the PoGo",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jok3rsGh0st",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
