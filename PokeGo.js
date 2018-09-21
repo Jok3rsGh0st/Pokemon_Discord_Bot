@@ -1,12 +1,10 @@
 const botconfig = require("./botconfig.json");
 const tokenfile = process.env.TokenPoGo;
 const Discord = require("discord.js");
-
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  //bot.user.setGame("Pokemon Go!")
   bot.user.setActivity("Pokemon Go!")
 });
 
@@ -22,11 +20,9 @@ bot.on("message", async message => {
 //Server Information
   if (cmd === `${prefix}report`){
 
-    //Report and this is the reason
+    //Report set up
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.memeber.get(args[0]));
-    //if(!rUser) return message.channel.send("Couldn't find user.");
     let reason = args.join(" ").slice(22);
-
     let reportEmbed = new Discord.RichEmbed()
       .setDescription("Reports")
       .setColor("#15f153")
@@ -37,14 +33,11 @@ bot.on("message", async message => {
       .addField("Reason", reason);
 
       let reportschannel = message.guild.channels.find(`name`, "reports-from-users");
-      //if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-      //if(!reportchannel) return message.channel.send("Couldn't find reports channel.");
-
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed);
-
     return;
   }
+  //User Reports
   if (cmd === `${prefix}Report`){
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.memeber.get(args[0]));
     //if(!rUser) return message.channel.send("Couldn't find user.");
@@ -62,10 +55,8 @@ bot.on("message", async message => {
       let reportschannel = message.guild.channels.find(`name`, "reports-from-users");
       //if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
       //if(!reportchannel) return message.channel.send("Couldn't find reports channel.");
-
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed);
-
     return;
   }
   //Server Info + Bot
@@ -144,4 +135,4 @@ bot.on("message", async message => {
   }
 });
 
-bot.login(botconfig.token);
+bot.login(TokenPoGo.env.token);
