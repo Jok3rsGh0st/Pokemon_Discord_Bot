@@ -145,7 +145,6 @@ bot.on("message", async message => {
     return message.channel.send("___***Mamoswine***___");
     return message.channel.send("___***Weaknesses:***___ Fire 160%, Water 160%, Grass 160%, Fighting 160%, Steel 160% /n___***Resistance:***___ /nElectric 39%, Poison 63%");
     return message.channel.send("___***Counters:***___ /nGroudon: Ground /Rhyperior: Ground & Rock /nWeavile: Dark & Ice");
-    return message.channel.send("```Type	Quick Move	DMG	EPS	DPS /nMud Slap	15	8.6	12.9 /nPowder Snow	6	15	7.2 /nType	Charge Move	DMG	EPS	DPS /nAvalanche	90	-18.5	33.8 /nBulldoze	80	-14.3	24 /nStone Edge	100	-43.5	35.7```");
   }
   );
 
