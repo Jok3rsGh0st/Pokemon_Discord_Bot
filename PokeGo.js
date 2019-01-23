@@ -132,7 +132,7 @@ bot.on("message", async message => {
   }
   if(cmd === `${prefix}fog`){
     return message.channel.send("Ice and Steel moves are boosted");
-  }
+  });
 
 //Community Day Information
   if(cmd === `${prefix}CommunityDay`){
