@@ -87,8 +87,8 @@ bot.on("message", async message => {
 
 //Commands
   if(cmd === `${prefix}Help`){
-	message.channel.send("Use !! and weather type to see what pokemon are boosted.");
-	message.channel.send("Use !! and CommunityDay or CommunityStats.");
+	message.channel.send("Use !! and weather type to see what pokemon are boosted.")
+	message.channel.send("Use !! and CommunityDay or CommunityStats.")
 	message.channel.send("Use !! and RaidsLvl5 for information.");
   }
   
@@ -141,14 +141,14 @@ bot.on("message", async message => {
 
 //Community Day Information
   if(cmd === `${prefix}CommunityDay`){
-    return message.channel.send("Community Day: 16 Febuary 2019, 11:00 - 14:00");
-    return message.channel.send("___***Feature:***___ /nSwinub will appear more frequently in the wild. /nLure Modules will last 3 hours for the duration of the event.");
+    return message.channel.send("Community Day: 16 Febuary 2019, 11:00 - 14:00")
+    return message.channel.send("___***Feature:***___ /nSwinub will appear more frequently in the wild. /nLure Modules will last 3 hours for the duration of the event.")
     return message.channel.send("___***Bonuses:***___ /n3x Catch Stardust. /nEarn 5 rewards per day from Trainer Battles. /nEarn up to 5 Sinnoh Stones from Trainer Battles on Community Day.");
   }
 
   if(cmd === `${prefix}CommunityStats`){
-    return message.channel.send("___***Mamoswine***___");
-    return message.channel.send("___***Weaknesses:***___ Fire 160%, Water 160%, Grass 160%, Fighting 160%, Steel 160% /n___***Resistance:***___ /nElectric 39%, Poison 63%");
+    return message.channel.send("___***Mamoswine***___")
+    return message.channel.send("___***Weaknesses:***___ Fire 160%, Water 160%, Grass 160%, Fighting 160%, Steel 160% /n___***Resistance:***___ /nElectric 39%, Poison 63%")
     return message.channel.send("___***Counters:***___ /nGroudon: Ground /Rhyperior: Ground & Rock /nWeavile: Dark & Ice");
   }
   
