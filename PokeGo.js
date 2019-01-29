@@ -16,6 +16,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+});
 
 //Server Information
   if (cmd === `${prefix}report`){
@@ -84,10 +85,14 @@ bot.on("message", async message => {
     return message.channel.send(botembed);
   }
 
-//Weather commands
+//Commands
   if(cmd === `${prefix}Help`){
     return message.channel.send("Use !! and weather type to see what pokemon are boosted.");
+	return message.channel.send("Use !! and CommunityDay or CommunityStats.");
+	return message.channel.send("Use !! and RaidsLvl5 for information.");
   }
+  
+  //Weather Commands
   if(cmd === `${prefix}Sunny`){
     return message.channel.send("Grass, Fire and Ground moves are boosted");
   }
@@ -132,7 +137,7 @@ bot.on("message", async message => {
   }
   if(cmd === `${prefix}fog`){
     return message.channel.send("Ice and Steel moves are boosted");
-  });
+  }
 
 //Community Day Information
   if(cmd === `${prefix}CommunityDay`){
@@ -146,6 +151,19 @@ bot.on("message", async message => {
     return message.channel.send("___***Weaknesses:***___ Fire 160%, Water 160%, Grass 160%, Fighting 160%, Steel 160% /n___***Resistance:***___ /nElectric 39%, Poison 63%");
     return message.channel.send("___***Counters:***___ /nGroudon: Ground /Rhyperior: Ground & Rock /nWeavile: Dark & Ice");
   }
-  );
-
+  
+  //Legendary Raids
+  if(cmd === `${prefix}RaidsLvl5`){
+    return message.channel.send("___***Palkia | #484***___");
+	return message.channel.send("Catch CP: 2190 - 2280");
+	return message.channel.send("Boosted: 2737 - 2850 | Rainy and Windy");
+	return message.channel.send("Weak against: Dragon & Fairy");
+	return message.channel.send("Quick Counters: Dragon Tail, Dragon Breath, Confusion");
+	return message.channel.send("Charged Counters: Outrage, Draco Meteor, Dragon Claw, Dazzling Gleam");
+  }
+  
+  if(cmd === `${prefix}RaidsLvl4`){
+    return message.channel.send("___***No Tier 4 Info Yet***___");
+  }
+  
 bot.login(TokenPoGo.env.token);
