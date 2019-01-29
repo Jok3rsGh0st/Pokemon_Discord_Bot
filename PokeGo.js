@@ -87,9 +87,9 @@ bot.on("message", async message => {
 
 //Commands
   if(cmd === `${prefix}Help`){
-    return message.channel.send("Use !! and weather type to see what pokemon are boosted.");
-	return message.channel.send("Use !! and CommunityDay or CommunityStats.");
-	return message.channel.send("Use !! and RaidsLvl5 for information.");
+	message.channel.send("Use !! and weather type to see what pokemon are boosted.");
+	message.channel.send("Use !! and CommunityDay or CommunityStats.");
+	message.channel.send("Use !! and RaidsLvl5 for information.");
   }
   
   //Weather Commands
